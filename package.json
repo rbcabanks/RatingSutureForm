@@ -1,0 +1,25 @@
+{
+  "name": "ratingsutureform",
+  "version": "1.0.0",
+  "description": "rating-suture-form/ │ ├── index.html        # main form ├── app.js            # handles randomization, rendering, form logic ├── styles.css         # (optional) styling ├── videos.json         # dataset about videos (metadata, questions, etc.) ├── questions.html    # form questions └── videos/           # folder containing all your mp4 files     ├── vid1.mp4     ├── vid2.mp4     └── ...",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbcabanks/RatingSutureForm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rbcabanks/RatingSutureForm/issues"
+  },
+  "homepage": "https://github.com/rbcabanks/RatingSutureForm#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
