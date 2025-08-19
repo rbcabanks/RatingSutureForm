@@ -1,5 +1,10 @@
 Rating Suture Form uses Express.js, Node.js, HTML, JS, CSS.
 
+PAGES:
+/responses.html -> all responses
+/index.html -> form
+
+
 INSTRUCTIONS:
 Open a terminal in the project folder.
 
