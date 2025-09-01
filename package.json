@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/rbcabanks/RatingSutureForm#readme",
   "dependencies": {
+    "chokidar": "^4.0.3",
     "express": "^5.1.0"
   }
 }

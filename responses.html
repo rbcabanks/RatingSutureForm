@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Survey Responses</title>
   <style>
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #333; padding: 8px; text-align: left; }
-    th { background-color: #eee; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+    }
   </style>
 </head>
+
 <body>
   <h1>Survey Responses</h1>
   <table>
@@ -20,7 +34,9 @@
         <th>Suture Size</th>
         <th>Suture Direction</th>
         <th>Tension</th>
+        <th>Handling Tightness</th>
         <th>Num Attempts</th>
+        <th>Needle Repositioning</th>
         <th>Additional Observations</th>
       </tr>
     </thead>
@@ -31,7 +47,7 @@
 
   <script>
     async function loadResponses() {
-    try {
+      try {
         const res = await fetch('responses.json');
         const data = await res.json();
         if (!Array.isArray(data) || data.length === 0) return;
@@ -42,66 +58,70 @@
         // Group by participantId
         const participantMap = {};
         data.forEach(entry => {
-        const pid = entry.participantId;
-        if (!participantMap[pid]) participantMap[pid] = [];
-        participantMap[pid].push(entry);
+          const pid = entry.participantId;
+          if (!participantMap[pid]) participantMap[pid] = [];
+          participantMap[pid].push(entry);
         });
 
         // Generate colors for participants
         const colors = {};
         const colorPalette = [
-        "#FFDDC1", "#C1FFD7", "#C1D4FF", "#FFFAC1", "#FBC1FF",
-        "#C1FFF6", "#FFD7C1", "#E0C1FF"
+          "#FFDDC1", "#C1FFD7", "#C1D4FF", "#FFFAC1", "#FBC1FF",
+          "#C1FFF6", "#FFD7C1", "#E0C1FF"
         ];
 
         let colorIndex = 0;
         for (const pid of Object.keys(participantMap)) {
-        colors[pid] = colorPalette[colorIndex % colorPalette.length];
-        colorIndex++;
+          colors[pid] = colorPalette[colorIndex % colorPalette.length];
+          colorIndex++;
         }
 
         // Render table
         for (const [pid, videos] of Object.entries(participantMap)) {
-        videos.forEach((video, idx) => {
+          videos.forEach((video, idx) => {
             const tr = document.createElement('tr');
             tr.style.backgroundColor = colors[pid]; // set row color
 
             // Only show participantId on first row
             if (idx === 0) {
-            const td = document.createElement('td');
-            td.textContent = pid;
-            td.rowSpan = videos.length;
-            tr.appendChild(td);
+              const td = document.createElement('td');
+              td.textContent = pid;
+              td.rowSpan = videos.length;
+              tr.appendChild(td);
             }
 
             const columns = [
-            video.videoId || "",
-            video.sutureOffset || "",
-            video.sutureSize || "",
-            video.sutureDirection || "",
-            video.tension || "",
-            video.numAttempts || "",
-            video.additionalObservations || ""
+              video.videoId || "",
+              video.sutureOffset || "",
+              video.sutureSize || "",
+              video.sutureDirection || "",
+              video.tension || "",
+              video.tightness || "",           // NEW
+              video.numAttempts || "",
+              video.repositioning || "",       // NEW
+              video.additionalObservations || ""
             ];
 
+
             columns.forEach(c => {
-            const td = document.createElement('td');
-            td.textContent = c;
-            tr.appendChild(td);
+              const td = document.createElement('td');
+              td.textContent = c;
+              tr.appendChild(td);
             });
 
             tbody.appendChild(tr);
-        });
+          });
         }
 
-    } catch (err) {
+      } catch (err) {
         console.error('Error loading responses:', err);
-    }
+      }
     }
 
     loadResponses();
     setInterval(loadResponses, 10000); // optional auto-refresh
-    </script>
+  </script>
 
 </body>
+
 </html>

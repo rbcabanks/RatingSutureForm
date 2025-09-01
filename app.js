@@ -2,7 +2,7 @@ let videos = [];
 let currentIndex = 0;
 let allResponses = [];
 const participantId = `user-${Date.now()}`;
-const VIDEOS_PER_SESSION = 12;
+const VIDEOS_PER_SESSION = 12; // variable you can change 
 
 // ---------------- SHUFFLE HELPER ----------------
 function shuffle(array) {
@@ -16,7 +16,7 @@ function shuffle(array) {
 // ---------------- FETCH VIDEOS ----------------
 async function initVideos() {
   try {
-    const res = await fetch("videos.json");
+    const res = await fetch("videos.json")
     const data = await res.json();
 
     videos = shuffle(data.videos).slice(0, Math.min(VIDEOS_PER_SESSION, data.videos.length));

@@ -6,7 +6,9 @@
     "sutureSize": "Standard",
     "sutureDirection": "Parallel to laceration",
     "tension": "Yes",
-    "numAttempts": "3 ",
+    "tightness": "Standard tightening",
+    "repositioning": "1 attempt",
+    "numAttempts": "3",
     "additionalObservations": ""
   },
   {
@@ -16,6 +18,8 @@
     "sutureSize": "Small",
     "sutureDirection": "Medial",
     "tension": "Not Clear",
+    "tightness": "Not tightening enough",
+    "repositioning": "2 attempts",
     "numAttempts": "2",
     "additionalObservations": ""
   },
@@ -26,7 +30,9 @@
     "sutureSize": "Standard",
     "sutureDirection": "Medial",
     "tension": "Not Clear",
-    "numAttempts": "3 ",
+    "tightness": "Excessive tightening",
+    "repositioning": "3+ attempts",
+    "numAttempts": "3",
     "additionalObservations": ""
   },
   {
@@ -36,7 +42,9 @@
     "sutureSize": "Large",
     "sutureDirection": "Lateral",
     "tension": "No",
-    "numAttempts": "3 ",
+    "tightness": "Standard tightening",
+    "repositioning": "1 attempt",
+    "numAttempts": "3",
     "additionalObservations": ""
   },
   {
@@ -46,7 +54,9 @@
     "sutureSize": "Small",
     "sutureDirection": "Parallel to laceration",
     "tension": "Not Clear",
-    "numAttempts": "3 ",
+    "tightness": "Not tightening enough",
+    "repositioning": "2 attempts",
+    "numAttempts": "3",
     "additionalObservations": ""
   },
   {
@@ -56,6 +66,8 @@
     "sutureSize": "Small",
     "sutureDirection": "Parallel to laceration",
     "tension": "Not Clear",
+    "tightness": "Standard tightening",
+    "repositioning": "0 attempts - grabs needle with needle holder (directly from the tissue, no repositioning)",
     "numAttempts": "2",
     "additionalObservations": ""
   }
