@@ -14,6 +14,8 @@ Open a terminal in the project folder.
     3.Open your browser at:
     http://localhost:3000
 
+UPDATING VIDEOS:
+node updateVideos.js
 
 MAPPING: 
 
