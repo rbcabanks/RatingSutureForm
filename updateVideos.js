@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const chokidar = require("chokidar");
 
 const videosFolder = path.join(__dirname, "videoFolder");
 const videosJson = path.join(__dirname, "videos.json");
@@ -22,21 +21,13 @@ function updateVideosJson() {
   });
 }
 
-// Run once
+// Run once at startup
 updateVideosJson();
 
-
-// Watch for changes
-chokidar.watch(videosFolder, { ignoreInitial: true })
-  .on("add", file => {
-    if (file.endsWith(".mp4")) {
-      console.log(`➕ New video: ${file}`);
-      updateVideosJson();
-    }
-  })
-  .on("unlink", file => {
-    if (file.endsWith(".mp4")) {
-      console.log(`❌ Removed video: ${file}`);
-      updateVideosJson();
-    }
-  });
+// Watch for changes using fs.watch
+fs.watch(videosFolder, (eventType, filename) => {
+  if (filename && filename.endsWith(".mp4")) {
+    console.log(`📂 Change detected (${eventType}): ${filename}`);
+    updateVideosJson();
+  }
+});
