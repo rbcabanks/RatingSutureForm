@@ -15,12 +15,6 @@ Open a terminal in the project folder.
     http://localhost:3000
 
 
-UPLOAD NEW VIDEO AND UPDATE THE WEBSITE (SO THOSE NEW VIDEOS ARE IN THE RANDOMIZED CHOICE OF VIDEOS)
-
-    1. npm install chokidar
-
-    2. node updateVideos.js
-
 MAPPING: 
 
 rating-suture-form/
