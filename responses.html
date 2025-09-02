@@ -5,26 +5,19 @@
   <meta charset="UTF-8">
   <title>Survey Responses 📊</title>
   <style>
-    html {
-      padding: 10px;
-    }
-
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
-      background: #7575759c;
+      background: #f4f6f9;
       color: #333;
+      padding: 20px;
     }
 
     h1 {
       text-align: center;
-      padding: 20px;
-      margin: 0;
-      background: rgb(62, 255, 178);
-      color: black;
-      font-weight: 500;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      border: 3px solid black;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #222;
     }
 
     .controls {
@@ -33,40 +26,45 @@
     }
 
     button {
-      background: rgb(62, 255, 178);
-      color: black;
-      border: 1px solid black;
+      background: #3ecf8e;
+      color: white;
+      border: none;
       padding: 10px 18px;
       margin: 0 8px;
       font-size: 15px;
-      border-radius: 6px;
+      font-weight: 500;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: background 0.2s ease, transform 0.15s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     button:hover {
-      background: #1b5fad;
+      background: #32b97c;
+      transform: translateY(-1px);
     }
 
     #pageInfo {
       display: inline-block;
       margin: 0 10px;
-      font-weight: 1000;
-      font-size: large;
-      color: #000000;
+      font-weight: 600;
+      font-size: 15px;
+      color: #222;
+    }
+
+    .table-container {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      overflow-x: auto;
     }
 
     table {
       border-collapse: collapse;
       width: 100%;
-      margin-top: 20px;
-      font-family: "Inter", sans-serif;
       font-size: 14px;
       color: #2c3e50;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      border-radius: 8px;
-      overflow: hidden;
     }
 
     th,
@@ -76,32 +74,31 @@
     }
 
     th {
-      background: rgb(62, 255, 178);
-      ;
-      color: rgb(0, 0, 0);
+      background: #3ecf8e;
+      color: white;
       font-weight: 600;
-      border-bottom: 2px solid #e1e5ea;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    td
+    {
+      border: 1px solid #3ecf8e;
     }
 
-    td,
     th {
       border: 1px solid black;
     }
 
-    td:last-child,
-    th:last-child {
-      border-right: none;
-    }
-
-    /* zebra striping for rows */
     tbody tr:nth-child(even) {
-      background: #fdfdfd;
+      background: #fafafa;
     }
 
     tbody tr:hover {
       background: #f1f5f9;
     }
   </style>
+
 </head>
 
 <body>
