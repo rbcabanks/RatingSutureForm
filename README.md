@@ -1,4 +1,5 @@
 Rating Suture Form uses Express.js, Node.js, HTML, JS, CSS.
+*For the sake of patient confidentiality, I have replaced real surgury videos with random nature videos
 
 INSTRUCTIONS:
 Open a terminal in the project folder.
