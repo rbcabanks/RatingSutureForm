@@ -24,7 +24,7 @@ Open a terminal in the project folder.
     1. url + /responses.html
 
     
-###MAPPING:
+### MAPPING:
 rating-suture-form/
 │
 ├── index.html         # Main HTML page: displays video and form
@@ -46,7 +46,7 @@ rating-suture-form/
     └── ...
 
 
-NOTES
+### NOTES
 Change number of videos per session
 -Config variable in app.js
     - const VIDEOS_PER_FORM = 5; // change this to however many videos you want per session
