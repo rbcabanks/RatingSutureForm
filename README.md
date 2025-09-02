@@ -1,8 +1,8 @@
-Rating Suture Form uses Express.js, Node.js, HTML, JS, CSS.
+# Rating Suture Form uses Express.js, Node.js, HTML, JS, CSS.
 
-*For the sake of patient confidentiality, I have replaced real surgury videos with random nature videos
+## For the sake of patient confidentiality, I have replaced real surgury videos with random nature videos
 
-INSTRUCTIONS:
+### INSTRUCTIONS:
 Open a terminal in the project folder.
 
     1.Run:
@@ -16,13 +16,15 @@ Open a terminal in the project folder.
     3.Open your browser at:
     http://localhost:3000
 
-
-UPLOAD NEW VIDEO AND UPDATE THE WEBSITE (SO THOSE NEW VIDEOS ARE IN THE RANDOMIZED CHOICE OF VIDEOS)
+### UPLOAD NEW VIDEO AND UPDATE THE WEBSITE (SO THOSE NEW VIDEOS ARE IN THE RANDOMIZED CHOICE OF VIDEOS)
 
     1. node updateVideos.js
 
-MAPPING: 
+### ACCESS RESPONSES
+    1. url + /responses.html
 
+    
+###MAPPING:
 rating-suture-form/
 │
 ├── index.html         # Main HTML page: displays video and form
