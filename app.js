@@ -2,7 +2,7 @@ let videos = [];
 let currentIndex = 0;
 let allResponses = [];
 const participantId = `user-${Date.now()}`;
-const VIDEOS_PER_SESSION = 12; // variable you can change 
+const VIDEOS_PER_SESSION = 2; // variable you can change 
 
 // ---------------- SHUFFLE HELPER ----------------
 function shuffle(array) {
@@ -136,9 +136,32 @@ document.getElementById("submitBtn").addEventListener("click", () => {
     alert("Please answer all required questions before submitting.");
     return;
   }
-  saveResponses();
-  alert("All responses submitted!");
+
+  saveResponses(); // make sure the last page is saved
+
+  fetch("/saveResponses", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(allResponses)  // send all responses
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Final responses submitted:", data);
+
+      //  Replace page content with an end page
+      document.body.innerHTML = `
+        <div style="text-align:center;color:white; margin-top:50px;">
+          <h1>✅ Thank you!</h1>
+          <p>Your responses have been submitted successfully.</p>
+        </div>
+      `;
+    })
+    .catch(err => {
+      console.error("Error submitting final responses:", err);
+      alert("There was an error submitting your responses. Please try again.");
+    });
 });
+
 
 // ---------------- INIT ----------------
 initVideos();

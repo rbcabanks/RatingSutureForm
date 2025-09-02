@@ -14,8 +14,10 @@ Open a terminal in the project folder.
     3.Open your browser at:
     http://localhost:3000
 
-UPDATING VIDEOS:
-node updateVideos.js
+
+UPLOAD NEW VIDEO AND UPDATE THE WEBSITE (SO THOSE NEW VIDEOS ARE IN THE RANDOMIZED CHOICE OF VIDEOS)
+
+    1. node updateVideos.js
 
 MAPPING: 
 

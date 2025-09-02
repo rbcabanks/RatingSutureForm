@@ -70,5 +70,77 @@
     "repositioning": "0 attempts - grabs needle with needle holder (directly from the tissue, no repositioning)",
     "numAttempts": "2",
     "additionalObservations": ""
+  },
+  {
+    "participantId": "user-1756770565543",
+    "videoId": 8,
+    "sutureOffset": "Good Offset -suture begins behind last needle exit",
+    "sutureSize": "Standard",
+    "sutureDirection": "Not Parallel",
+    "tension": "Excessive tissue tension",
+    "tightness": "Excessive tightening",
+    "numAttempts": "4+",
+    "repositioning": "1 attempt",
+    "additionalObservations": ""
+  },
+  {
+    "participantId": "user-1756770565543",
+    "videoId": 4,
+    "sutureOffset": "Good Offset -suture begins behind last needle exit",
+    "sutureSize": "Standard",
+    "sutureDirection": "Parallel",
+    "tension": "Normal tissue tension",
+    "tightness": "Not tightening enough",
+    "numAttempts": "1 (ideal)",
+    "repositioning": "1 attempt",
+    "additionalObservations": ""
+  },
+  {
+    "participantId": "user-1756770947358",
+    "videoId": 13,
+    "sutureOffset": "Good Offset -suture begins behind last needle exit",
+    "sutureSize": "Large",
+    "sutureDirection": "Not Parallel",
+    "tension": "Normal tissue tension",
+    "tightness": "Not tightening enough",
+    "numAttempts": "1 (ideal)",
+    "repositioning": "1 attempt",
+    "additionalObservations": ""
+  },
+  {
+    "participantId": "user-1756770947358",
+    "videoId": 6,
+    "sutureOffset": "Negative Offset -suture begins ahead of last needle exit",
+    "sutureSize": "Large",
+    "sutureDirection": "Parallel",
+    "tension": "Normal tissue tension",
+    "tightness": "Excessive tightening",
+    "numAttempts": "4+",
+    "repositioning": "0 attempts - grabs needle with needle holder, directly from the tissue, no repositioning ",
+    "additionalObservations": ""
+  },
+  {
+    "participantId": "user-1756770947358",
+    "videoId": 13,
+    "sutureOffset": "Good Offset -suture begins behind last needle exit",
+    "sutureSize": "Large",
+    "sutureDirection": "Not Parallel",
+    "tension": "Normal tissue tension",
+    "tightness": "Not tightening enough",
+    "numAttempts": "1 (ideal)",
+    "repositioning": "1 attempt",
+    "additionalObservations": ""
+  },
+  {
+    "participantId": "user-1756770947358",
+    "videoId": 6,
+    "sutureOffset": "Negative Offset -suture begins ahead of last needle exit",
+    "sutureSize": "Large",
+    "sutureDirection": "Parallel",
+    "tension": "Normal tissue tension",
+    "tightness": "Excessive tightening",
+    "numAttempts": "4+",
+    "repositioning": "0 attempts - grabs needle with needle holder, directly from the tissue, no repositioning ",
+    "additionalObservations": ""
   }
 ]
